@@ -1,0 +1,8 @@
+%%HP: T(3)A(D)F(.);
+    \<< DUP2 5 PICK
+COS 2 * * * ROT ROT
+2 ^ SWAP 2 ^ + SWAP
+- \v/ SWAP DROP
+    \>>
+@ [a][s1][s2] ->               IN
+@ [v/(s1^2+s2^2-2s1s2COSa] OUT

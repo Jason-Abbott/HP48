@@ -1,0 +1,7 @@
+%%HP: T(3)A(D)F(.);
+    \<< \Gh1 \Gh2 TU1
+'\Gh3' STO C \Gh1 \Gh2
+TU2 'B' STO B \Gh2 \Gh3
+TU2 'A' STO
+    \>>
+@ (12C) #18

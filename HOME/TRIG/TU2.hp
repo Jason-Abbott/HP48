@@ -1,0 +1,6 @@
+%%HP: T(3)A(D)F(.);
+    \<< SIN SWAP SIN
+/ *
+    \>>
+@ [s][a1][a2] ->               IN
+@ [s(SINa2/SINa1)]            OUT

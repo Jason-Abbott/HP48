@@ -1,0 +1,6 @@
+%%HP: T(3)A(D)F(.);
+    \<< COS * ROT ROT
+COS * +
+    \>>
+@ [s1][a1][s2][a2] ->          IN
+@ [s1COSa1+s2COSa2]           OUT

@@ -1,0 +1,5 @@
+%%HP: T(3)A(D)F(.);
+    \<< B A \Gh3 TU5
+'\Gh2' STO TRI.L
+    \>>
+@ (AB3) #23

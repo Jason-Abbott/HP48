@@ -1,0 +1,10 @@
+%%HP: T(3)A(D)F(.);
+    \<< A B C + + 2 /
+DUP DUP2 A - * C /
+B / \v/ ACOS 2 * '\Gh3'
+STO C - * A / B / \v/
+ACOS 2 * '\Gh1' STO
+\Gh1 \Gh3 + 180 SWAP -
+'\Gh2' STO
+    \>>
+@ (ABC) #35

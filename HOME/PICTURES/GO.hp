@@ -1,0 +1,12 @@
+%%HP: T(3)A(D)F(.);
+    \<< ERASE { # 0d
+# 0d } PVIEW { # 0d
+# 0d } PICT OVER
+MOTO GXOR 5 MAXR
+      FOR I I 131
+MOD R\->B # 0d 2
+\->LIST PICT OVER
+MOTO GXOR PICT ROT
+MOTO GXOR 5
+      STEP
+    \>>

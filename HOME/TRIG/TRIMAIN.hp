@@ -1,0 +1,74 @@
+%%HP: T(3)A(D)F(.);
+    \<< CLEAR ERASE
+TRI.P2 PICT STO 1
+FIX
+      IFERR { { "A"
+{
+        \<< CLLCD 'A'
+STO 8 PICT RCL
+(-3.5,1.5) A \->STR 1
+\->GROB GOR DUP PICT
+STO \->LCD 3 FREEZE
+        \>>
+        \<< CONT
+        \>> } } { "B"
+{
+        \<< CLLCD 'B'
+STO 12 PICT RCL
+(2.3,1.5) B \->STR 1
+\->GROB GOR DUP PICT
+STO \->LCD 3 FREEZE
+        \>> } } { "C"
+{
+        \<< CLLCD 'C'
+STO 15 PICT RCL
+(-.6,-1.5) C \->STR 1
+\->GROB GOR DUP PICT
+STO \->LCD 3 FREEZE
+        \>> } } {
+"\Gh1" {
+        \<< CLLCD
+'\Gh1' STO 1 PICT RCL
+(-.6,1.9) \Gh1 \->STR 1
+\->GROB GOR DUP PICT
+STO \->LCD 3 FREEZE
+        \>> } } {
+"\Gh2" {
+        \<< CLLCD
+'\Gh2' STO 2 PICT RCL
+(-2.8,-.5) \Gh2 \->STR
+1 \->GROB GOR DUP
+PICT STO \->LCD 3
+FREEZE
+        \>> } } {
+"\Gh3" {
+        \<< CLLCD
+'\Gh3' STO 3 PICT RCL
+(1.6,-.5) \Gh3 \->STR 1
+\->GROB GOR DUP PICT
+STO \->LCD 3 FREEZE
+        \>> } } }
+TMENU TRI.P1 \->LCD 3
+FREEZE HALT + + 54
++ CHR 'TRI.' SWAP +
+STR\-> 'Angles' \Gh1 \Gh2
+\Gh3 3 \->LIST 'Sides'
+A B C 3 \->LIST
+TRI.P2 (-.6,1.9) \Gh1
+\->STR 1 \->GROB GOR
+(-2.8,-.5) \Gh2 \->STR
+1 \->GROB GOR
+(1.6,-.5) \Gh3 \->STR 1
+\->GROB GOR
+(-3.5,1.5) A \->STR 1
+\->GROB GOR (2.3,1.5)
+B \->STR 1 \->GROB GOR
+(-.6,-1.5) C \->STR 1
+\->GROB GOR \->LCD 7
+FREEZE { A B C \Gh1
+\Gh2 \Gh3 } PURGE 2
+MENU
+      THEN TRILL
+\->LCD 3 FREEZE
+      END
+    \>>

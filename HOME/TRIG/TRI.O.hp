@@ -1,0 +1,5 @@
+%%HP: T(3)A(D)F(.);
+    \<< \Gh2 A C TU3
+'B' STO TRI.Y
+    \>>
+@ (AC2) #25

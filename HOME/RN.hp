@@ -1,4 +1,4 @@
 %%HP: T(3)A(D)F(.);
-\<< OVER RCL ROT
+    \<< OVER RCL ROT
 PURGE SWAP STO
 \>>

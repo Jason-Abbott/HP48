@@ -1,6 +1,7 @@
 %%HP: T(3)A(D)F(.);
     \<< CLEAR CLLCD
-"ENTER KNOWN VALUES"
+"ENTER \->2\<- KNOWN VALUES
+THEN [CONT]"
 1 DISP 1 FREEZE { {
 "PT1" {
       \<< DUP
@@ -49,4 +50,5 @@ LIST\-> DROP SWAP M *
 EVAL
         END
       END { PT1 PT2
-M B } PURGE \>>
+M B } PURGE 2 MENU
+    \>>
