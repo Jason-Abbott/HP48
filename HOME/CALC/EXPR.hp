@@ -1,0 +1,4 @@
+%%HP: T(3)A(D)F(.);
+\<< 'Y' 2 PICK 'X' \.d
+COLCT 3 ROLLD \.d
+COLCT + CLMF \>>

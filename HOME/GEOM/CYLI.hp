@@ -1,0 +1,13 @@
+%%HP: T(3)A(D)F(.);
+\<< CLLCD
+"WOW, you're good" 1
+DISP 1 WAIT CLLCD
+Vol 3.14159265359 R
+2 ^ * H * + 1 DISP
+or R 2 ^ H * \pi * + 2
+DISP Area 2
+3.14159265359 * R *
+H * + 3 DISP or 2 R
+* H * \pi * + 4 DISP
+10 WAIT STD { R H A
+} PURGE CLMF \>>

@@ -1,0 +1,16 @@
+%%HP: T(3)A(D)F(.);
+\<< RAD CLLCD
+"If you're patient"
+1 DISP
+"you'll get to see a"
+2 DISP
+"DAZZLING osciloscopic"
+3 DISP "Display" 4
+DISP '~~' EVAL CLLCD
+"Impressed?" 1 DISP
+"[ON]=Stop" 4 DISP 0
+6
+  FOR X 2000 X COS 1
++ * .01 BEEP DRAX X
+X COS R\->C PIXEL .1
+  STEP \>>

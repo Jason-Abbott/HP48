@@ -1,0 +1,18 @@
+%%HP: T(3)A(D)F(.);
+\<< CLLCD
+"Oh, please stop" 2
+DISP 4000 .1 BEEP
+400 .1 BEEP 2000 .1
+BEEP 500 .1 BEEP
+1000 .1 BEEP 200 .1
+BEEP 3000 .1 BEEP 2
+WAIT CLLCD Volume 4
+3 / 3.14159265359 *
+R 2 ^ * + 1 DISP or
+4 3 / R 2 ^ * \pi * +
+2 DISP Area 4
+3.14159265359 * R 2
+^ * + 3 DISP or 4 R
+^ 2 * \pi * + 4 DISP
+10 WAIT STD { R H A
+} PURGE CLMF \>>
