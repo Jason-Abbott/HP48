@@ -16,5 +16,4 @@ DOTS GXOR -.1
 (-5.9,-.2) SPI REPL
 3 FREEZE
     \>>
-  \>>
-\>>
+  \>> \>>

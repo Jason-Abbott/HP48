@@ -4,5 +4,5 @@ COS 2 * * * ROT ROT
 2 ^ SWAP 2 ^ + SWAP
 - \v/ SWAP DROP
     \>>
-@ [a][s1][s2] ->                   IN
-@ [v/(s1^2+s2^2 2s1s2COSa] OUT
+@ [a][s1][s2] ->               IN
+@ [v/(s1^2+s2^2-2s1s2COSa]     OUT

@@ -12,7 +12,7 @@ GET EVAL 'SC' STO
 'RT' STO 'V' STO
 'P' STO 'R' STO 'M'
 STO "
-" + 1 DISP 1
+ " + 1 DISP 1
 FREEZE { { "MASS" {
   \<< M "Mass" \->TAG
   \>> } } { "RADUS" {
