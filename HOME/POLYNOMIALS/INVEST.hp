@@ -1,0 +1,7 @@
+%%HP: T(3)A(D)F(.);
+{ 'A=P*(1+R/N)^(N*T
+)' { { "TOTAL" A }
+{ "INVST" P } {
+"RATE" R } {
+"CP/YR" N } {
+"YEARS" T } } }

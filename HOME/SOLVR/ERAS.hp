@@ -1,0 +1,8 @@
+%%HP: T(3)A(D)F(.);
+\<< { p1i p2i p1f p2f
+V1i V2i V1f V2f m1
+m2 \GDp \GDt F W m a Vi
+Vf Vx Vy V t d \Gh dx
+dy T r T1 T2 r1 r2
+P PE Ki Kf } PURGE
+\>>

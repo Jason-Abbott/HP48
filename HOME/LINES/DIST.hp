@@ -1,35 +1,4 @@
 %%HP: T(3)A(D)F(.);
-    \<<
-      IFERR L STO P
-STO L LIST\-> 2 ==
-        IF 0 SAME
-        THEN CLEAR
-L LIST\-> DROP \-> A M
-B
-          \<< P LIST\->
-DROP \-> X Y
-            \<< M X *
-A Y * + B - M 2 ^ A
-2 ^ + \v/ /
-"Distance" \->TAG
-            \>>
-          \>>
-        ELSE CLEAR
-L P LIST\-> DROP 3
-ROLL LIST\-> DROP
-SWAP 4 ROLL SWAP -
-2 ^ 2 ROLL 3 ROLL
-SWAP - 2 ^ + \v/
-"Distance" \->TAG
-        END { L P }
-PURGE
-      THEN CLLCD
-"Points must be entered
-   in {x,y} form and
-lines as {A,M,B} where
-
-        Ay=Mx+B"
-1 DISP ERRM 7 DISP
-7 FREEZE
-      END
-    \>>
+\<< - ABS "Distance"
+\->TAG
+\>>

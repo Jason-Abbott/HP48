@@ -1,0 +1,17 @@
+%%HP: T(3)A(D)F(.);
+\<< CLLCD
+"T: period (revs/time)
+r: radius
+m: mass
+F: force of gravity
+d: distance"
+1 DISP 3 FREEZE { '
+(T1/T2)^2=(r1/r2)^3
+' 'F=CONST(G)*m1*m2
+/d^2' } STEQ MINIT
+"" { T1 T2 r1 r2 m1
+m2 F d } MITM ERAS
+-62 SF HALT -62 CF
+MSOLVR GRAP \->LCD 3
+FREEZE
+\>>

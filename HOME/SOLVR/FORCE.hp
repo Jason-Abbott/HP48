@@ -1,0 +1,22 @@
+%%HP: T(3)A(D)F(.);
+\<< CLLCD
+"F: force
+W: work
+P: power
+t: time
+K: kinetic energy
+PE: potential energy
+"
+1 DISP 3 FREEZE { '
+W=F*d*COS(\Gh)' 'P=W/
+t' 'W=Kf-Ki' 'Ki=.5
+*m*Vi^2' 'Kf=.5*m*
+Vf^2' 'PE=m*CONST(g
+)*d' 'F=m*a' } STEQ
+MINIT "" { F W m a
+d \Gh t P Ki Kf PE ""
+Vi Vf } MITM ERAS
+-62 SF HALT -62 CF
+MSOLVR FORP \->LCD 3
+FREEZE
+\>>

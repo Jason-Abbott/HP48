@@ -1,5 +1,5 @@
 %%HP: T(3)A(D)F(.);
-    \<< SWAP 2 / NEG
-DUP SQ ROT - \v/ DUP2
-+ 3 ROLLD -
-    \>>
+\<< SWAP 2 / NEG DUP
+SQ ROT - \v/ DUP2 + 3
+ROLLD -
+\>>

@@ -2,5 +2,5 @@
     \<< SIN ROT ROT /
 * ASIN
     \>>
-@ [s1][s2][a] ->               IN
-@ [ASIN((s1/s2)SINa)]         OUT
+@ [s1][s2][a] ->            IN
+@ [ASIN((s1/s2)SINa)]       OUT

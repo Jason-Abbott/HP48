@@ -1,22 +1,22 @@
 %%HP: T(3)A(D)F(.);
-    \<< 3 PICK -3 / 3
+\<< 3 PICK -3 / 3
 PICK 5 PICK SQ 3 /
 - 5 ROLL DUP 3 ^ 2
 * SWAP 9 * 6 ROLL *
 - 27 / 4 ROLL + NEG
 OVER ABS 0
-      IF ==
-      THEN 3 INV ^
-SWAP DROP 0 SWAP
-      ELSE 2 / DUP
-SQ 3 PICK 3 ^ 27 /
-+ \v/ - 3 INV ^ SWAP
-OVER / 3 / NEG
-      END -1 3 \v/
-R\->C 2 / 4 ROLLD 3
-DUPN 3 DUPN + + 8
-ROLLD 7 PICK * SWAP
-7 PICK / + + 5
-ROLLD 4 PICK / SWAP
-4 ROLL * + +
-    \>>
+  IF ==
+  THEN 3 INV ^ SWAP
+DROP 0 SWAP
+  ELSE 2 / DUP SQ 3
+PICK 3 ^ 27 / + \v/ -
+3 INV ^ SWAP OVER /
+3 / NEG
+  END -1 3 \v/ R\->C 2
+/ 4 ROLLD 3 DUPN 3
+DUPN + + 8 ROLLD 7
+PICK * SWAP 7 PICK
+/ + + 5 ROLLD 4
+PICK / SWAP 4 ROLL
+* + +
+\>>

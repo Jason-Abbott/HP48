@@ -1,37 +1,34 @@
 %%HP: T(3)A(D)F(.);
-    \<< 3 PICK NEG
-DUP 6 ROLLD 5 PICK
-4 PICK * 3 PICK 4 *
-- 5 ROLL 4 * 6 PICK
-SQ - 4 PICK * 5
-PICK SQ - cubic 3
-\->LIST 1 3
-      FOR n DUP n
-GET 2 / SQ n 2 +
-PICK - ABS SWAP
-      NEXT 4 ROLLD
-DUP2
-      IF <
-      THEN SWAP
-DROP 3
-      ELSE DROP 2
-      END 3 ROLLD
-      IF >
-      THEN DROP 1
-      END GET 4
-ROLL 2 / SWAP 2 /
-DUP SQ 4 ROLL - \v/
-      IF DUP ABS
-      THEN 3 DUPN 3
+\<< 3 PICK NEG DUP 6
+ROLLD 5 PICK 4 PICK
+* 3 PICK 4 * - 5
+ROLL 4 * 6 PICK SQ
+- 4 PICK * 5 PICK
+SQ - cubic 3 \->LIST
+1 3
+  FOR n DUP n GET 2
+/ SQ n 2 + PICK -
+ABS SWAP
+  NEXT 4 ROLLD DUP2
+  IF <
+  THEN SWAP DROP 3
+  ELSE DROP 2
+  END 3 ROLLD
+  IF >
+  THEN DROP 1
+  END GET 4 ROLL 2
+/ SWAP 2 / DUP SQ 4
+ROLL - \v/
+  IF DUP ABS
+  THEN 3 DUPN 3
 ROLLD * 6 ROLL 2 /
 - SWAP /
-      ELSE 3 PICK
-SQ 6 ROLL + 3 PICK
-2 * + \v/
-      END 5 ROLL
-DROP 3 ROLLD 4 DUPN
-+ 3 ROLLD + SWAP
-quad 6 ROLLD 6
-ROLLD - 3 ROLLD -
-SWAP quad
-    \>>
+  ELSE 3 PICK SQ 6
+ROLL + 3 PICK 2 * +
+\v/
+  END 5 ROLL DROP 3
+ROLLD 4 DUPN + 3
+ROLLD + SWAP quad 6
+ROLLD 6 ROLLD - 3
+ROLLD - SWAP quad
+\>>

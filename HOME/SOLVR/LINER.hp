@@ -1,0 +1,21 @@
+%%HP: T(3)A(D)F(.);
+\<<
+"V: velocity
+a: acceleration
+t: time
+d: distance
+m: mass
+F: force
+W: weight"
+1 DISP 3 FREEZE { '
+d=Vi*t+.5*a*t^2' 'd
+=(Vf+Vi)*t/2' 'a=(
+Vf-Vi)/t' 'Vf^2=Vi^
+2+2*a*d' 'F=m*a' 'W
+=F' } STEQ MINIT ""
+{ Vi Vf a t d "" m
+F W } MITM ERAS -62
+SF HALT -62 CF
+MSOLVR LINP \->LCD 3
+FREEZE
+\>>

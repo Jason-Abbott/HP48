@@ -1,0 +1,6 @@
+%%HP: T(3)A(D)F(.);
+{
+\<< 2 FIX A B FX X \.d
+2 ^ 1 + \v/ X \.S \->NUM
+\->Q STD
+\>> { A B FX } }

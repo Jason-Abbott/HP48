@@ -1,9 +1,0 @@
-%%HP: T(3)A(D)F(.);
-    \<< 2 FIX LIST\->
-\->ARRY DUP 1 GET /
-ARRY\-> LIST\-> DROP 1
-- DUP 2 + ROLL DROP
-{ NEG quad cubic
-quar } SWAP GET
-EVAL
-    \>>
