@@ -1,0 +1,18 @@
+%%HP: T(3)A(D)F(.);
+\<< TEXT CLLCD ERAS
+"m: mass
+T: period (revs/time)
+r: radius
+d: distance
+F: force of gravity
+"
+1 DISP 3 FREEZE { '
+(T1/T2)^2=(r1/r2)^3
+' 'F=6.67E-11*m1*m2
+/d^2' 'm1/m2=(r1/r2
+)^2' 'F=m1*a' }
+STEQ MINIT "" { T1
+T2 r1 r2 m1 m2 F d
+a } MITM MSOLVR
+GRA.P \->LCD 3 FREEZE
+\>>

@@ -1,18 +1,33 @@
 %%HP: T(3)A(D)F(.);
-\<< DUP 1 GET OVER
-SIZE \-> D T N
-  \<< { } SWAP DUP
-SIZE N - 1 + 1 SWAP
-    START DUP 1 GET
-T / COLCT ROT OVER
-1 \->LIST + 3 ROLLD 1
-N
-      FOR M OVER M
-GET D M GET 3 PICK
-* - ROT M ROT PUT
+\<<
+  IFERR STD CLEAR
+"Enter coefficients of
+dividend and divisor:"
+{
+":dividend: {}
+:divisor : {"
+{ 1 13 } } INPUT
+OBJ\-> DTAG DUP 1 GET
+OVER SIZE \-> D T N
+    \<< DTAG { } SWAP
+DUP SIZE N - 1 + 1
 SWAP
-      NEXT DROP 2
+      START DUP 1
+GET T / COLCT ROT
+OVER 1 \->LIST + 3
+ROLLD 1 N
+        FOR M OVER
+M GET D M GET 3
+PICK * - ROT M ROT
+PUT SWAP
+        NEXT DROP 2
 100 SUB
-    NEXT D
-  \>>
+      NEXT D
+"Divisor" \->TAG SWAP
+"Remainder" \->TAG 3
+ROLL "Quotient"
+\->TAG
+    \>>
+  THEN BAD
+  END
 \>>

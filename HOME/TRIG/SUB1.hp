@@ -1,5 +1,9 @@
 %%HP: T(3)A(D)F(.);
-\<< 3 ROLL DEPTH
+\<< 1 FS?
+  IF 1 \=/
+  THEN TRI.P2 PICT
+STO 1 SF
+  END 3 ROLL DEPTH
   IF 4 >
   THEN DROP2 CONT
   END \->STR 1 \->GROB

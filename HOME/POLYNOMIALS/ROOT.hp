@@ -1,8 +1,30 @@
 %%HP: T(3)A(D)F(.);
-\<< 2 FIX LIST\-> \->ARRY
-DUP 1 GET / ARRY\->
-LIST\-> DROP 1 - DUP
-2 + ROLL DROP { NEG
-quad cubic quar }
-SWAP GET EVAL
+\<<
+  IFERR CLEAR
+"Enter coefficients of
+the polynomial"
+{ "    {}
+" { 1 6 }
+} INPUT OBJ\-> LIST\->
+\->ARRY DUP 1 GET /
+ARRY\-> LIST\-> DROP 1
+- DUP 2 + ROLL DROP
+{ NEG quad cubic
+quar } SWAP GET
+EVAL DEPTH 'D' STO
+1 D
+    START DUP TYPE
+      IF 0 \=/
+      THEN C\->R DUP
+ABS
+        IF .01 <
+        THEN DROP
+        ELSE R\->C .1
+* \->Q .1 / EXPAN
+COLCT
+        END
+      END D ROLL
+    NEXT 2 FIX
+  THEN BAD
+  END
 \>>

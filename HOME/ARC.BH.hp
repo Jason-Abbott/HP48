@@ -1,0 +1,2 @@
+%%HP: T(3)A(D)F(.);
+'Lgth=Hite*(Base/4*Hite*\v/(4+(Base/2*Hite)^2)+2*LN(Base/4*Hite+.5*\v/(4+(Base/2*Hite)^2)))'

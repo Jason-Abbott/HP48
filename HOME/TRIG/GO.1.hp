@@ -1,0 +1,20 @@
+%%HP: T(3)A(D)F(.);
+\<<
+GROB 7 6 B6C1F7C1E355
+\-> SPI
+  \<<
+GROB 7 6 360000001414
+\-> DOTS
+    \<< (-6.5,3.2)
+TRI.P1 PICT STO
+PVIEW .8 -.2
+      FOR Y -5.9 Y
+R\->C DUP PICT SWAP
+SPI REPL PICT SWAP
+DOTS GXOR -.1
+      STEP PICT
+(-5.9,-.2) SPI REPL
+3 FREEZE
+    \>>
+  \>>
+\>>

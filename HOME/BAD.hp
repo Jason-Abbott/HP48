@@ -1,0 +1,5 @@
+%%HP: T(3)A(D)F(.);
+\<< BAD.P \->LCD 7
+FREEZE 2 WAIT -62
+SF OFF
+\>>

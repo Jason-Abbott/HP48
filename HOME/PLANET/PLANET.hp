@@ -1,0 +1,52 @@
+%%HP: T(3)A(D)F(.);
+\<< STD PLA.P \->LCD 7
+FREEZE 0 WAIT {
+82.1 83.1 84.1 72.1
+73.1 74.1 62.1 63.1
+64.1 11.1 12.1 }
+SWAP POS PDATA SWAP
+GET EVAL 'SC' STO
+'SM' STO 'E' STO
+'DE' STO 'TE' STO
+'T' STO 'D' STO
+'RT' STO 'V' STO
+'P' STO 'R' STO 'M'
+STO "
+" + 1 DISP 1
+FREEZE { { "MASS" {
+  \<< M "Mass" \->TAG
+  \>> } } { "RADUS" {
+  \<< R "Radius" \->TAG
+  \>> } } { "PERD" {
+  \<< P "Orbit" \->TAG
+RT "Rotation" \->TAG
+  \>> } } { "SPEED" {
+  \<< V "Velocity"
+\->TAG
+  \>> } } { "DIST" {
+  \<< D "Distance"
+\->TAG
+  \>> } } { "TILT" {
+  \<< T "Tilt" \->TAG
+  \>> } } { "TEMP" {
+  \<< TE
+"Temperature" \->TAG
+  \>> } } { "DENSI" {
+  \<< DE
+"Density(\|>H\178O)"
+\->TAG
+  \>> } } { "ECCN" {
+  \<< E
+"Eccentricity" \->TAG
+  \>> } } { "SATL" {
+  \<< SM "Moons" \->TAG
+SC "Rings" \->TAG
+  \>> } } { "NEW"
+PLANET } { "EXIT" {
+  \<< { M R P V RT D
+T TE DE E SM SC }
+PURGE 1 MENU
+PREP.P1 \->LCD 3
+FREEZE
+  \>> } } } TMENU
+\>>

@@ -1,0 +1,9 @@
+%%HP: T(3)A(D)F(.);
+\<< "" {
+":Point (x,y): ()
+:Y-intcpt(b): "
+{ 1 16 } } INPUT
+OBJ\-> DTAG 'B' STO
+DTAG OBJ\-> B - SWAP
+/ 'M' STO
+\>>

@@ -1,4 +1,16 @@
 %%HP: T(3)A(D)F(.);
-\<< - ABS "Distance"
-\->TAG
+\<<
+  IFERR STD CLEAR
+"Enter coordinates as
+vectors"
+{
+":Point 1: []
+:Point 2: ["
+{ 1 12 } } INPUT
+OBJ\-> - ABS DUP SQ
+\->STR "\v/" SWAP +
+"Distance=" \->TAG
+SWAP "or" \->TAG
+  THEN BAD
+  END
 \>>

@@ -1,0 +1,28 @@
+%%HP: T(3)A(D)F(.);
+\<< TEXT CLLCD ERAS
+"t: time
+W: work
+F: force
+P: power
+K: kinetic energy
+PE: potential energy
+"
+1 DISP 3 FREEZE { '
+W=F*d*COS(\Gh)' 'P=W/
+t' 'W=Kf-Ki' 'Ki=.5
+*m*Vi^2' 'Kf=.5*m*
+Vf^2' 'PE=m*-9.8*d'
+'F=m*a' } STEQ
+MINIT "" { F W m a
+d \Gh t P Ki Kf PE ""
+Vi Vf } MITM 0 '\Gh'
+STO '\Gh' MUSER ERASE
+(-6.5,3.2) PVIEW
+-1.5 -3.2
+  FOR X X X NEG 1.1
+- R\->C PICT SWAP
+FO.P1 REPL -.1
+  STEP PICT
+(.4,-.1) FO.P2 GOR
+3 FREEZE MSOLVR
+\>>

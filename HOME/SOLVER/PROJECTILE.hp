@@ -1,0 +1,29 @@
+%%HP: T(3)A(D)F(.);
+\<<
+GROB 5 5 E0111111E0
+\-> PRO
+  \<< TEXT CLLCD DEG
+ERAS
+"V: Velocity
+x: horizontal
+y: vertical"
+1 DISP 3 FREEZE { '
+t=(Vy+s1*\v/((-Vy)^2-
+19.6*y))/9.8' 'x=Vx
+*t' 'Vx=V*COS(\Gh)' '
+Vy=V*SIN(\Gh)' } STEQ
+MINIT "" { x y Vx
+Vy V t \Gh "" "" ""
+s1 } MITM 1 's1'
+STO 's1' MUSER
+ERASE (-6.5,3.2)
+PVIEW PICT
+(-3.8,2.9) PRO.P
+REPL -2.8 2.9
+    FOR X X -.5 X 2
+^ * 2.9 + R\->C PICT
+SWAP PRO REPL .2
+    STEP 3 FREEZE
+MSOLVR
+  \>>
+\>>

@@ -1,0 +1,11 @@
+%%HP: T(3)A(D)F(.);
+\<< "" {
+":Point 1: ()
+:Point 2: ("
+{ 1 12 } } INPUT
+OBJ\-> DTAG DUP 'P'
+STO OBJ\-> ROT DTAG
+OBJ\-> ROT - SWAP ROT
+- / 'M' STO P OBJ\->
+SWAP M * - 'B' STO
+\>>

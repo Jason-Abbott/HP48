@@ -1,0 +1,17 @@
+%%HP: T(3)A(D)F(.);
+\<< TEXT CLLCD DEG
+ERAS
+"m: mass
+T: period (revs/time)
+r: radius
+V: velocity
+F: force \-> center
+a: circular accel.
+"
+1 DISP 3 FREEZE { '
+T=2*\pi*\v/(r/a)' 'F=m*
+a' 'a=V^2/r' 'V=2*\pi
+*r/T' } STEQ MINIT
+MSOLVR CIR.P \->LCD 3
+FREEZE
+\>>

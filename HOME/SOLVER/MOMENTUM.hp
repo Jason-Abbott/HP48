@@ -1,0 +1,36 @@
+%%HP: T(3)A(D)F(.);
+\<< TEXT 'PPAR' PURGE
+CLLCD ERAS
+"m: mass
+F: force
+p: momentum
+V: velocity
+\GDt: change in time
+\GDp: change in momentum
+"
+1 DISP 3 FREEZE { '
+m*Vi+m2*V2i=m*Vf+m2
+*V2f' 'pi=m*Vi' '
+p2i=m2*V2i' 'pf=m*
+Vf' 'p2f=m2*V2f' '
+\GDp=m*(Vf-Vi)' 'F=\GDp
+/\GDt' 'pi+p2i=pf+p2f
+' } STEQ MINIT "" {
+Vi V2i Vf V2f m m2
+pi p2i pf p2f "" ""
+\GDt \GDp F } MITM
+ERASE (-6.5,3.2)
+PVIEW PICT
+(-6.3,2.7) MO.P1
+REPL 1 WAIT -3.1 1
+  FOR X X -.7 R\->C
+PICT SWAP MO.P2
+REPL .2
+  STEP 2.1 3.3
+  FOR X X -.7 R\->C
+PICT SWAP MO.P2
+REPL .1
+  STEP PICT (1.4,0)
+MO.P3 GOR 3 FREEZE
+MSOLVR
+\>>
