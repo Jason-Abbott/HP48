@@ -1,0 +1,52 @@
+%%HP: T(3)A(D)F(.);
+    \<< CLEAR CLLCD
+"ENTER KNOWN VALUES"
+1 DISP 1 FREEZE { {
+"PT1" {
+      \<< DUP
+"Point 1" \->TAG
+CLLCD 1 DISP 1
+FREEZE 'PT1' STO
+      \>> } } { "PT2"
+{
+      \<< DUP
+"Point 2" \->TAG
+CLLCD 1 DISP 1
+FREEZE 'PT2' STO
+      \>> } } { "M" {
+      \<< DUP "Slope"
+\->TAG CLLCD 1 DISP 1
+FREEZE 'M' STO
+      \>> } } { "B" {
+      \<< DUP
+"Y-intcpt" \->TAG
+CLLCD 1 DISP 1
+FREEZE 'B' STO
+      \>> } } {
+"CONT" {
+      \<< CONT
+      \>> } } } TMENU
+HALT PT1 TYPE 5
+SAME PT2 TYPE 5
+SAME AND
+      IF 1 SAME
+      THEN PT1
+LIST\-> DROP PT2
+LIST\-> DROP ROT -
+SWAP ROT - / M STO
+PT1 LIST\-> DROP SWAP
+M * / B STO 'y=M*x+
+B' EVAL
+      ELSE B TYPE
+        IF 0 SAME
+        THEN PT1
+LIST\-> DROP B - SWAP
+/ M STO 'y=M*x+B'
+EVAL
+        ELSE PT1
+LIST\-> DROP SWAP M *
+- B STO 'y=M*x+B'
+EVAL
+        END
+      END { PT1 PT2
+M B } PURGE \>>

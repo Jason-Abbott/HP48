@@ -1,0 +1,27 @@
+%%HP: T(3)A(D)F(.);
+    \<< J STO DUP K
+STO LIST\-> 2 ==
+      IF 0 SAME
+      THEN CLEAR K
+LIST\-> DROP \-> B A C
+        \<< J LIST\->
+DROP \-> X Y
+          \<< '(A*X+B
+*Y-C)/\v/(A^2+B^2)'
+EVAL \->STR
+"Distance = " SWAP
++
+          \>>
+        \>>
+      ELSE CLEAR J
+K LIST\-> DROP 3 ROLL
+LIST\-> DROP SWAP 4
+ROLL SWAP - 2 ^ 2
+ROLL 3 ROLL SWAP -
+2 ^ + D STO D \->STR
+"Distance = \v/" SWAP
++ D \v/ \->STR "or =  "
+SWAP +
+      END { A B C D
+E J K } PURGE
+    \>>
